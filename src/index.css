@@ -20,9 +20,10 @@
   --blue: #57cbff;
   --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --font-size-10: 1rem;
+    --font-size-15: 1.5rem;
 }
-
 
 body {
   margin: 0;
@@ -33,6 +34,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--navy);
   backdrop-filter: blur(10px);
+  counter-reset: navitem section;
+
 }
 
 code {
@@ -57,6 +60,7 @@ code {
 
 .text-secondary-hover:hover {
   color: var(--green);
+  
 }
 
 .text-title {
@@ -83,6 +87,78 @@ code {
 }
 
 
+.numbered-navitem::before {
+  position: relative;
+  counter-increment: navitem 1;
+  content: "0" counter(navitem) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-10);
+  font-weight: 400;
+}
+
+.numbered-section::before {
+  position: relative;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-15);
+  font-weight: 400;
+}
+
 .main-section {
   padding: 0 150px;
+}
+
+.personal-image-container {
+  position: relative;
+  width: 200px;
+}
+
+
+.personal-image-cover {
+  opacity: 0.3;
+  background-color: var(--green);
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: var(--transition);
+  border-radius: 5px;
+}
+
+.personal-image-border {
+  display: block;
+  position: absolute;
+  top: 20px;
+  bottom: -20px;
+  right: -20px;
+  left: 20px;
+  z-index: -2;
+  border: 1px solid var(--green);
+  transition: var(--transition);
+}
+
+.personal-image{
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.personal-image-container:hover .personal-image-cover {
+  opacity: 0;
+}
+
+.personal-image-container:hover .personal-image-border {
+  top: 10px;
+  bottom: -10px;
+  right: -10px;
+  left: 10px;
 }

@@ -10,10 +10,10 @@ function HeaderComponent() {
                         </a>
                     </div>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                        <nav className="hidden space-x-10 md:flex">
-                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover"><span className="text-primary">01. </span>About</a>
-                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover"><span className="text-primary">02. </span>Work</a>
-                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover"><span className="text-primary">03. </span>Experience</a>
+                    <nav className="hidden space-x-10 md:flex">
+                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover numbered-navitem">About</a>
+                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover numbered-navitem">Work</a>
+                            <a href="#" className="text-base font-medium text-secondary text-secondary-hover numbered-navitem">Experience</a>
                         </nav>
                         <a href="#" className="ml-5 whitespace-nowrap text-white font-bold py-2 px-4 rounded btn-primary">Login</a>
                     </div>
