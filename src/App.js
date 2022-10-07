@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import AppSetup from './Components/admin/AppSetup';
+import HomepageComponent from './Components/public/homepage.component';
 
 function App() {
   return (
     <div className="App">
-        <AppSetup></AppSetup>  
+      <HomepageComponent></HomepageComponent>
     </div>
   );
 }
