@@ -1,6 +1,6 @@
 function HeroComponent() {
     return (
-        <div className="relative z-50 w-full flex-none text-sm leading-6 my-32">
+        <div className="relative w-full flex-none text-sm leading-6 my-32" id="hero-section">
             <div className="mx-auto max-w-7xl px-4 sm:px-6">
                 <div className="flex items-center justify-between p-20 md:justify-start md:space-x-10">
                     <div className="justify-start lg:w-0 lg:flex-1 text-primary text-sans">

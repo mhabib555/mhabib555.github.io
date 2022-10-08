@@ -82,10 +82,20 @@ code {
   transition: var(--transition);
 }
 
+
+.bg-navy {
+  background-color: var(--navy);
+}
+
 .btn-primary:hover {
   background-color: var(--lightest-navy);
 }
 
+.link-active {
+    color: var(--green);
+    text-decoration: dashed;
+
+}
 
 .numbered-navitem::before {
   position: relative;

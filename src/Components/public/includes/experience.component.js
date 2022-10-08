@@ -2,7 +2,7 @@ import habibImage from '../../../assets/images/habibImage.jpg';
 
 function AboutComponent() {
     return (
-        <div className="relative w-full flex-none text-sm leading-6 my-32 mx-20" id="about-section">
+        <div className="relative w-full flex-none text-sm leading-6 my-32 mx-20" id="experience-section">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 p-20">
                 <h5 className="py-4 numbered-section">
                     <span className="text-3xl text-title font-semibold">About Me</span>
